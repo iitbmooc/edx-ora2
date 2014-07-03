@@ -297,7 +297,7 @@ Note that you won't use the **Settings** tab in the component editor when you cr
 Step 2. Specify the Assignment Name and Assessment Types
 ========================================================
 
-To specify the name and assessment types for the assignment, you'll work with the XML near the top of the assignment.
+To specify the name and assessment types for the assignment, you'll work with the XML near the top of the component editor.
 
 In the component editor, locate the following XML:
 
