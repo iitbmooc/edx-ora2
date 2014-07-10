@@ -12,8 +12,12 @@
 **/
 
 OpenAssessment.StudioView = function(runtime, element, server) {
+    this.element = element;
     this.runtime = runtime;
     this.server = server;
+
+    // Resize the editing modal
+    this.fixModalHeight();
 
     // Initialize the tabs
     $(".openassessment_editor_content_and_tabs", this.element).tabs();
@@ -54,9 +58,20 @@ OpenAssessment.StudioView = function(runtime, element, server) {
 OpenAssessment.StudioView.prototype = {
 
     /**
-     Save the problem's XML definition to the server.
-     If the problem has been released, make the user confirm the save.
-     **/
+    Adjusts the modal's height, position and padding to be larger for OA editing only (Does not impact other modals)
+    **/
+    fixModalHeight: function () {
+        $(this.element)
+            .toggleClass('openassessment_full_height')
+            .parentsUntil('.modal-window')
+            .toggleClass('openassessment_full_height');
+        $('.modal-window').toggleClass('openassessment_modal_window');
+    },
+
+    /**
+    Save the problem's XML definition to the server.
+    If the problem has been released, make the user confirm the save.
+    **/
     save: function () {
         var view = this;
 
