@@ -4,7 +4,7 @@
 cd `dirname $BASH_SOURCE` && cd ..
 
 # Install dependencies
-./scripts/install.sh
+./scripts/install-python.sh
 
 # Configure Django settings
 export DJANGO_SETTINGS_MODULE="settings.dev"
