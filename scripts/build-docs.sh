@@ -11,7 +11,7 @@ cd docs/en_us
 # build course authors docs
 cd course_authors
 if [ -f requirements.txt ]; then
-    pip install -r -q requirements.txt
+    pip install -q -r requirements.txt
 fi
 make html
 cd ..
@@ -19,7 +19,7 @@ cd ..
 # build developer docs
 cd developers
 if [ -f requirements.txt ]; then
-    pip install -r -q requirements.txt
+    pip install -q -r requirements.txt
 fi
 make html
 cd ..

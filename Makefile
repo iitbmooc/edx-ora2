@@ -1,13 +1,13 @@
 all: install test
 
 install-system:
-	sudo apt-get update -y
-	sudo xargs -a apt-packages.txt apt-get install -y --fix-missing
+	sudo apt-get update -y -qq
+	sudo xargs -a apt-packages.txt apt-get install -y -qq --fix-missing
 
 install-node:
 	sudo add-apt-repository -y ppa:chris-lea/node.js
-	sudo apt-get update -y
-	sudo apt-get install -y nodejs
+	sudo apt-get update -y -qq
+	sudo apt-get install -y -qq nodejs
 
 
 install-python:
